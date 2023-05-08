@@ -113,6 +113,12 @@ return [
         'emergency' => [
             'path' => storage_path('logs/laravel.log'),
         ],
+
+        'telegram' => [
+            'driver' => 'daily',
+            'path' => storage_path('logs/telegram/' . date('d-m-y')  . '/' . date('H:i') . '.log'),
+            'level' => 'debug',
+        ],
     ],
 
 ];
